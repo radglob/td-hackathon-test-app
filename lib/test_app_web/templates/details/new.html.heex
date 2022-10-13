@@ -1,0 +1,14 @@
+<%= form_for @changeset, Routes.details_path(@conn, :create), fn f -> %>
+  <%= label do %>
+    Start Time
+    <%= datetime_select f, :start_time %>
+  <% end %>
+  <%= label do %>
+    End Time
+    <%= datetime_select f, :end_time %>
+  <% end %>
+
+  <%= link "Back to Details", to: Routes.details_path(@conn, :new), class: "button" %>
+  <%= submit "Create Event" %>
+
+<% end %>

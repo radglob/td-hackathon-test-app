@@ -1,0 +1,9 @@
+<%= form_for @changeset, Routes.location_path(@conn, :create), fn f -> %>
+  <%= label do %>
+    Location Name
+    <%= text_input f, :location_name %>
+  <% end %>
+
+  <%= link "Back to host", to: Routes.host_path(@conn, :new), class: "button" %>
+  <%= submit "Add Details" %>
+<% end %>
